@@ -13,9 +13,9 @@ class Election < ActiveRecord::Base
     raw = JSON.parse(raw)
     election_list = []
     raw['elections'].each do |x|
-      if x['name'].exclude?('Test')
+      # if x['name'].exclude?('Test')
         election_list.push([x['name'], x['id']])
-      end
+      # end
     end
     return election_list
   end
